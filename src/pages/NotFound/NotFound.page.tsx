@@ -1,5 +1,6 @@
-import { GoBackButton } from '@components';
 import { FC } from 'react';
+
+import { GoBackButton } from '@components';
 
 import style from './NotFound.module.scss';
 

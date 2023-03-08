@@ -7,8 +7,10 @@
       "@assets": ["src/assets"],
       "@router/*": ["src/router/*"],
       "@components": ["src/components"],
-      "@constants": ["src/constants"],
-      "@hooks": ["src/hooks"],
+      "@constants/*": ["src/constants/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@api/*": ["src/api/*"],
+      "@redux": ["src/redux"],
       "@pages": ["src/pages"]
     },
     "jsx": "react-jsx",

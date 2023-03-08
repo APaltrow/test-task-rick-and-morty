@@ -11,24 +11,29 @@
   border-radius: 4px;
   box-shadow: $box_shadow;
 
+  overflow: hidden;
+
   &:hover {
     cursor: pointer;
   }
 }
 .character_img {
-  width: 100%;
-  flex: 1;
+  width: 240px;
+  height: 168px;
 
   object-fit: cover;
 }
 .character_name {
   margin: 12px 16px 0px 16px;
+  width: 100%;
 
   color: $color_font_primary;
 
   font-size: $font_20;
   line-height: 30px;
   font-weight: 500;
+
+  text-overflow: ellipsis;
 }
 
 .character_title {

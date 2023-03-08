@@ -2,10 +2,14 @@ import { FC } from 'react';
 
 import style from './ProfilePhoto.module.scss';
 
-export const ProfilePhoto: FC = () => (
+interface ProfilePhotoProps {
+  imgUrl: string;
+  name: string;
+}
+export const ProfilePhoto: FC<ProfilePhotoProps> = ({ imgUrl, name }) => (
   <img
     className={style.photo}
-    src="https://www.shutterstock.com/image-vector/rick-morty-portal-vector-600w-2089759198.jpg"
-    alt="profile"
+    src={imgUrl}
+    alt={name || 'Character image'}
   />
 );
