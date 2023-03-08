@@ -1,0 +1,22 @@
+@import '@style/_variables.scss';
+
+.go_back_btn {
+  position: absolute;
+  top: 23px;
+  left: 54px;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  background-color: transparent;
+
+  font-weight: 700;
+  font-size: $font_18;
+  text-transform: uppercase;
+  color: $color_button;
+
+  &:hover {
+    cursor: pointer;
+  }
+}

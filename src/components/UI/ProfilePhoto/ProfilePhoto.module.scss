@@ -1,0 +1,10 @@
+@import '@style/_variables.scss';
+
+.photo {
+  width: $profile_size;
+  height: $profile_size;
+  margin: 76px 0px 16px 0px;
+
+  border-radius: 50%;
+  border: $profile_photo;
+}

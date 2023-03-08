@@ -1,0 +1,14 @@
+@import '@style/_variables.scss';
+
+.heading {
+  font-size: $font_48;
+  margin: 100px;
+}
+
+.message {
+  margin-bottom: 70px;
+
+  font-size: $font_20;
+  font-weight: bold;
+  color: $color_font_secondary;
+}

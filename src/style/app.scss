@@ -1,0 +1,28 @@
+@import '@style/_font.scss';
+@import '@style/_variables.scss';
+@import '@style/_normalize.scss';
+
+* {
+  @include normalize;
+}
+
+.app {
+  min-height: 100vh;
+
+  background-color: $color_main;
+
+  font-family: 'Roboto', sans-serif;
+}
+
+.container_main {
+  position: relative;
+  margin: 0 auto;
+  padding-bottom: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-width: $container_main_width;
+  min-height: $container_main_height;
+}

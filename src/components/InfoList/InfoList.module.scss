@@ -1,0 +1,32 @@
+@import '@style/_variables.scss';
+
+.info_list {
+  width: $container_info_width;
+}
+
+.info_list_item {
+  width: 100%;
+  height: $container_info_height;
+  padding: 9px 16px 11px 16px;
+
+  display: flex;
+  flex-direction: column;
+
+  border-bottom: $info_list;
+
+  b {
+    color: $color_font_primary;
+
+    font-size: $font_16;
+    line-height: 24px;
+    font-weight: 700;
+  }
+
+  span {
+    color: $color_font_secondary;
+
+    font-size: $font_14;
+    line-height: 20px;
+    font-weight: 400;
+  }
+}

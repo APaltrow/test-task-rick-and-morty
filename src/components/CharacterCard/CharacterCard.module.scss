@@ -1,0 +1,44 @@
+@import '@style/_variables.scss';
+
+.character_card {
+  width: $card_width;
+  height: $card_height;
+  margin-top: 28px;
+
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 4px;
+  box-shadow: $box_shadow;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+.character_img {
+  width: 100%;
+  flex: 1;
+
+  object-fit: cover;
+}
+.character_name {
+  margin: 12px 16px 0px 16px;
+
+  color: $color_font_primary;
+
+  font-size: $font_20;
+  line-height: 30px;
+  font-weight: 500;
+}
+
+.character_title {
+  margin: 0px 16px 12px 16px;
+
+  color: $color_font_secondary;
+
+  font-size: $font_14;
+  line-height: 21px;
+  font-weight: 400;
+
+  letter-spacing: 0.25px;
+}
