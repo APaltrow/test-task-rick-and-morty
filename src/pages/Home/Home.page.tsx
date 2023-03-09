@@ -1,8 +1,7 @@
-import { useState, FC, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { FC, useEffect } from 'react';
 
-import { SearchBar, Logo, CharacterCard } from '@components';
-import { useDebounce } from '@hooks/useDebounce';
+import { SearchBar, Logo, Error, Loader, CharactersList } from '@components';
+import { useSearch } from '@hooks/useSearch';
 import {
   useAppSelector,
   useAppDispatch,
@@ -11,31 +10,13 @@ import {
   fetchSearchThunk,
 } from '@redux';
 
-import style from './Home.module.scss';
+// import style from './Home.module.scss';
 
 export const HomePage: FC = () => {
-  const dispatch = useAppDispatch();
   const { characters, status, error } = useAppSelector(getCharactersState);
 
-  const [searchValue, setSearchValue] = useState(
-    localStorage.getItem('search') || '',
-  );
-
-  const debouncedFetch = useDebounce(400, (val: string) =>
-    dispatch(fetchSearchThunk(val)),
-  );
-
-  const onSearch = (val: string) => {
-    setSearchValue(val);
-    localStorage.setItem('search', val);
-
-    if (!val) {
-      dispatch(fetchCharactersThunk());
-      return;
-    }
-
-    debouncedFetch(val);
-  };
+  const dispatch = useAppDispatch();
+  const { searchValue, onSearch } = useSearch(error);
 
   useEffect(() => {
     if (searchValue) {
@@ -47,10 +28,6 @@ export const HomePage: FC = () => {
     dispatch(fetchCharactersThunk());
   }, []);
 
-  if (error) {
-    localStorage.setItem('search', '');
-  }
-
   return (
     <>
       <Logo />
@@ -60,24 +37,10 @@ export const HomePage: FC = () => {
         onSearch={onSearch}
       />
 
-      <div className={style.characters_catalog}>
-        {characters.length ? (
-          characters.map(({ id, name, species, image }) => (
-            <Link
-              to={`/character/${id}`}
-              key={id}
-            >
-              <CharacterCard
-                name={name}
-                species={species}
-                imgUrl={image}
-              />
-            </Link>
-          ))
-        ) : (
-          <div>Error: Nothing is found !</div>
-        )}
-      </div>
+      {status === 'pending' && <Loader />}
+      {error && <Error errorMessage={error} />}
+
+      <CharactersList characters={characters} />
     </>
   );
 };

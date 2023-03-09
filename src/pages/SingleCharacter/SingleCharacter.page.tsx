@@ -1,7 +1,13 @@
 import { FC, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
-import { GoBackButton, InfoList, ProfilePhoto } from '@components';
+import {
+  GoBackButton,
+  InfoList,
+  ProfilePhoto,
+  Error,
+  Loader,
+} from '@components';
 import { useScrollTop } from '@hooks/useScrollTop';
 import {
   fetchSingleCharacterThunk,
@@ -13,10 +19,11 @@ import {
 import style from './SingleCharacter.module.scss';
 
 export const SingleCharacterPage: FC = () => {
+  const { character, status, error } = useAppSelector(getSingleCharacterState);
+
   const dispatch = useAppDispatch();
   const { id } = useParams();
-
-  const { character, status, error } = useAppSelector(getSingleCharacterState);
+  useScrollTop();
 
   if (!id) return null;
 
@@ -24,29 +31,32 @@ export const SingleCharacterPage: FC = () => {
     dispatch(fetchSingleCharacterThunk(id));
   }, []);
 
-  useScrollTop();
-
-  return character ? (
+  return (
     <>
-      <section className={style.character_container}>
-        <ProfilePhoto
-          imgUrl={character.image}
-          name={character.name}
-        />
+      {status === 'pending' && <Loader />}
+      {error && <Error errorMessage={error} />}
 
-        <h1 className={style.name}>{character.name}</h1>
-        <p className={style.info}>Informations</p>
+      {character ? (
+        <section className={style.character_container}>
+          <ProfilePhoto
+            imgUrl={character.image}
+            name={character.name}
+          />
 
-        <InfoList
-          gender={character.gender}
-          status={character.status}
-          species={character.species}
-          origin={character.origin.name}
-          type={character.type}
-        />
-      </section>
+          <h1 className={style.name}>{character.name}</h1>
+          <p className={style.info}>Informations</p>
+
+          <InfoList
+            gender={character.gender}
+            status={character.status}
+            species={character.species}
+            origin={character.origin.name}
+            type={character.type}
+          />
+        </section>
+      ) : null}
 
       <GoBackButton />
     </>
-  ) : null;
+  );
 };

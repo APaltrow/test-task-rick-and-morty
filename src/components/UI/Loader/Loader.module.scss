@@ -1,0 +1,31 @@
+@import '@style/_variables.scss';
+
+.container {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+.loader_img {
+  width: $icon_size;
+  height: $icon_size;
+
+  animation: spinner 1s ease-in-out infinite;
+}
+
+.loader_text {
+  font-size: $font_16;
+  font-weight: bold;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

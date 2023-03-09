@@ -1,10 +1,1 @@
 @import '@style/_variables.scss';
-
-.characters_catalog {
-  width: $container_catalog_width;
-
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  grid-column-gap: 20px;
-}
