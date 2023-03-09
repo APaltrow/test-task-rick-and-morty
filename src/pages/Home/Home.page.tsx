@@ -2,9 +2,7 @@ import { useState, FC, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import { SearchBar, Logo, CharacterCard } from '@components';
-
 import { useDebounce } from '@hooks/useDebounce';
-
 import {
   useAppSelector,
   useAppDispatch,

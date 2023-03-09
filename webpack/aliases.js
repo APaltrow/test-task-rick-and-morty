@@ -10,7 +10,9 @@ module.exports = {
   '@components': path.join(__dirname, '..', 'src/', 'components'),
   '@constants': path.join(__dirname, '..', 'src/', 'constants'),
   '@hooks': path.join(__dirname, '..', 'src/', 'hooks'),
+  '@helpers': path.join(__dirname, '..', 'src/', 'helpers'),
   '@api': path.join(__dirname, '..', 'src/', 'api'),
   '@pages': path.join(__dirname, '..', 'src/', 'pages'),
   '@redux': path.join(__dirname, '..', 'src/', 'redux'),
+  '@types': path.join(__dirname, '..', 'src/', 'types'),
 };

@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { StatusList } from '@/types/storeTypes';
+import { StatusList } from '@types';
+import { sortByName } from '@helpers';
 
 import { fetchCharactersThunk, fetchSearchThunk } from './characters.actions';
 import { ICharactersState } from './characters.types';
@@ -25,7 +26,7 @@ export const charactersSlice = createSlice({
         state.characters = [];
       })
       .addCase(fetchCharactersThunk.fulfilled, (state, action) => {
-        state.characters = action.payload;
+        state.characters = sortByName(action.payload);
 
         state.status = StatusList.SUCCESS;
         state.error = '';
@@ -43,7 +44,7 @@ export const charactersSlice = createSlice({
         state.characters = [];
       })
       .addCase(fetchSearchThunk.fulfilled, (state, action) => {
-        state.characters = action.payload;
+        state.characters = sortByName(action.payload);
 
         state.status = StatusList.SUCCESS;
         state.error = '';

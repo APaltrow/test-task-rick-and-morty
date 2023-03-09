@@ -1,7 +1,8 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 
-import { fetchCharacters, fetchSearchedCharacters } from '@/api/charactersApi';
-import { ICharacter } from '@/types/characterTypes';
+import { ICharacter } from '@types';
+
+import { fetchCharacters, fetchSearchedCharacters } from '@api/charactersApi';
 
 export const fetchCharactersThunk = createAsyncThunk<ICharacter[]>(
   'characters/fetchCharactersThunk',

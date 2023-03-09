@@ -12,7 +12,7 @@ export const CharacterCard: FC<CardProps> = ({ name, species, imgUrl }) => (
   <section className={style.character_card}>
     <img
       src={imgUrl}
-      alt="character"
+      alt={name}
       className={style.character_img}
     />
     <h2 className={style.character_name}>{name}</h2>

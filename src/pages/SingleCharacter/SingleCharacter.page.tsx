@@ -2,15 +2,13 @@ import { FC, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { GoBackButton, InfoList, ProfilePhoto } from '@components';
-
+import { useScrollTop } from '@hooks/useScrollTop';
 import {
   fetchSingleCharacterThunk,
   getSingleCharacterState,
   useAppDispatch,
   useAppSelector,
 } from '@redux';
-
-import { useScrollTop } from '@hooks/useScrollTop';
 
 import style from './SingleCharacter.module.scss';
 

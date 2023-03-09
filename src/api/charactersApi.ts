@@ -1,12 +1,11 @@
 import axios from 'axios';
 
+import { ICharacter } from '@types';
 import {
   BASE_URL,
   SEARCH_BY_NAME_URL,
   SINGLE_CHARACTER_URL,
 } from '@constants/urls';
-
-import { ICharacter } from '@/types/characterTypes';
 
 export const fetchCharacters = async () => {
   const { data } = await axios.get(BASE_URL);

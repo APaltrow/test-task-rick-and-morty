@@ -26,6 +26,7 @@
     "react/jsx-props-no-spreading": ["warn"],
     "react/function-component-definition": ["off"],
     "no-shadow": "off",
+    "no-param-reassign": ["warn"],
     "indent": ["warn"],
     "@typescript-eslint/quotes": ["error", "single"],
     "jsx-quotes": ["error", "prefer-double"],

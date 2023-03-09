@@ -27,9 +27,11 @@ export const SearchBar: FC<SearchBarProps> = ({ value, onSearch }) => {
         />
         <input
           className={style.search_input}
+          id="search"
           type="search"
           value={value}
           onChange={onInputChange}
+          autoComplete="off"
           placeholder="Filter by name..."
         />
       </label>

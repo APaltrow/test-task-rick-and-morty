@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import { StatusList } from '@/types/storeTypes';
+import { StatusList } from '@types';
 
 import { ISingleCharacterState } from './singleCharacter.types';
 import { fetchSingleCharacterThunk } from './singleCharacter.actions';

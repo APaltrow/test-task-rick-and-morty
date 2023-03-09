@@ -2,15 +2,17 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@": ["src"],
+      "@/*": ["src/*"],
       "@style": ["src/style"],
       "@assets": ["src/assets"],
       "@router/*": ["src/router/*"],
       "@components": ["src/components"],
       "@constants/*": ["src/constants/*"],
       "@hooks/*": ["src/hooks/*"],
+      "@helpers": ["src/helpers"],
       "@api/*": ["src/api/*"],
       "@redux": ["src/redux"],
+      "@types": ["src/types"],
       "@pages": ["src/pages"]
     },
     "jsx": "react-jsx",
