@@ -1,6 +1,6 @@
 # _Project_ : Rick & Morty API (test task)
 
-_See project live :_ **[Rick&Morty.com]()**
+_See project live :_ **[Rick&Morty.com](https://apaltrow.github.io/test-task-rick-and-morty/)**
 
 ## About
 
