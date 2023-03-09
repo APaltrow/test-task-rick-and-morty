@@ -18,3 +18,14 @@
   font-size: $font_20;
   font-weight: bold;
 }
+
+@media only screen and (max-width: $media_small) {
+  .name {
+    font-size: $font_32;
+    line-height: 38px;
+  }
+  .info {
+    margin: 34.5px 0px 16px 0px;
+    align-self: flex-start;
+  }
+}

@@ -2,6 +2,23 @@
 
 .logo_img {
   margin-top: 86px;
-  width: $logo_width;
-  height: $logo_height;
+
+  max-width: $logo_width_big;
+  height: $logo_height_big;
+}
+
+@media only screen and (max-width: $media_mid) {
+  .logo_img {
+    margin-top: 92px;
+
+    width: 90vw;
+    height: 30vw;
+  }
+}
+
+@media only screen and (max-width: $media_small) {
+  .logo_img {
+    width: $logo_width_small;
+    height: $logo_height_small;
+  }
 }

@@ -1,13 +1,12 @@
 // COLORS schema
 
 $color_main: #ffffff;
-
 $color_border: rgba(0, 0, 0, 0.5);
+$color_button: #000000;
+$color_error: tomato;
 
 $color_font_primary: rgba(0, 0, 0, 0.87);
 $color_font_secondary: rgba(0, 0, 0, 0.6);
-
-$color_button: #000000;
 
 // CONTAINERS sizes
 
@@ -17,14 +16,31 @@ $container_main_height: 1119px;
 $container_catalog_width: 1020px;
 $container_catalog_height: 66px;
 
-$container_card_width: 240px;
-$container_card_height: 244px;
+$container_search_width_small: 312px;
 
-$container_info_width: 413px;
-$container_info_height: 64px;
+$container_search_height_small: 56px;
+$container_search_height_big: 66px;
 
-$card_width: 240px;
-$card_height: 244px;
+// Character card (from single character)
+
+$container_info_width_big: 413px;
+$container_info_width_small: 312px;
+
+$container_info_item_height: 64px;
+
+// Character card (from list)
+
+$card_width_small: 240px;
+$card_height_small: 244px;
+
+$card_width_big: 312px;
+$card_height_big: 308px;
+
+$card_img_width_small: 240px;
+$card_img_height_small: 168px;
+
+$card_img_width_big: 312px;
+$card_img_height_big: 232px;
 
 // FONT Sizes
 
@@ -32,14 +48,19 @@ $font_14: 14px;
 $font_16: 16px;
 $font_18: 18px;
 $font_20: 20px;
+$font_32: 32px;
 $font_48: 48px;
 
 // ICONS & IMGs sizes
 
-$logo_width: 600px;
-$logo_height: 200px;
+$logo_width_big: 600px;
+$logo_width_small: 312px;
 
-$profile_size: 300px;
+$logo_height_big: 200px;
+$logo_height_small: 104px;
+
+$profile_photo_size_big: 300px;
+$profile_photo_size_small: 150px;
 
 $icon_size: 24px;
 
@@ -51,5 +72,12 @@ $box_shadow: 0px 1px 5px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.12),
 // BORDERS
 
 $search_bar: 1px solid rgba(0, 0, 0, 0.5);
-$profile_photo: 5px solid #f2f2f7;
-$info_list: 1px solid rgba(33, 33, 33, 0.08);
+$border_profile_photo: 5px solid #f2f2f7;
+$border_info_list: 1px solid rgba(33, 33, 33, 0.08);
+
+// MEDIA Breakpoints
+
+$media_small: 360px;
+$media_mid: 620px;
+$media_large: 820px;
+$media_extra_large: 1020px;

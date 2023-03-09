@@ -1,8 +1,8 @@
 @import '@style/_variables.scss';
 
 .character_card {
-  width: $card_width;
-  height: $card_height;
+  width: $card_width_small;
+  height: $card_height_small;
   margin-top: 28px;
 
   display: flex;
@@ -18,8 +18,8 @@
   }
 }
 .character_img {
-  width: 240px;
-  height: 168px;
+  width: $card_img_width_small;
+  height: $card_img_height_small;
 
   object-fit: cover;
 }
@@ -46,4 +46,15 @@
   font-weight: 400;
 
   letter-spacing: 0.25px;
+}
+
+@media only screen and (max-width: $media_small) {
+  .character_card {
+    width: $card_width_big;
+    height: $card_height_big;
+  }
+  .character_img {
+    width: $card_img_width_big;
+    height: $card_img_height_big;
+  }
 }

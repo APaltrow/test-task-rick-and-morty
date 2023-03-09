@@ -20,3 +20,9 @@
     cursor: pointer;
   }
 }
+
+@media only screen and (max-width: $media_small) {
+  .go_back_btn {
+    left: 24px;
+  }
+}

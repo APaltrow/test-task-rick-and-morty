@@ -1,10 +1,28 @@
 @import '@style/_variables.scss';
 
 .characters_list {
-  width: $container_catalog_width;
+  max-width: $container_catalog_width;
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(1, 1fr);
   grid-column-gap: 20px;
+}
+
+@media only screen and (max-width: $media_extra_large) {
+  .characters_list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: $media_large) {
+  .characters_list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: $media_mid) {
+  .characters_list {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

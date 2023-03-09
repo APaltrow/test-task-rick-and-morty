@@ -1,11 +1,12 @@
 @import '@style/_variables.scss';
 
 .search_container {
-  width: $container_catalog_width;
-  height: 66px;
+  width: 100%;
+  height: $container_search_height_big;
 
   margin: 16px 0px 23px 0px;
 }
+
 .search_label {
   width: 100%;
   padding: 16px;
@@ -16,6 +17,7 @@
   border: $search_bar;
   border-radius: 8px;
 }
+
 .search_icon {
   width: $icon_size;
   height: $icon_size;
@@ -23,7 +25,16 @@
 
 .search_input {
   flex: 1;
+
   font-weight: 400;
   font-size: $font_16;
   color: $color_border;
+}
+
+@media only screen and (max-width: $media_small) {
+  .search_container {
+    width: $container_search_width_small;
+    height: $container_search_height_small;
+    margin: 32px 0px 4px 0px;
+  }
 }
