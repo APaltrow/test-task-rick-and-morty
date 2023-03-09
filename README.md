@@ -16,6 +16,7 @@ Application for searching Rick & Morty's cartoon characters.
 | Build            | Webpack                       |
 | State management | Redux (Toolkit + Async Thunk) |
 | Server requests  | Axios                         |
+| Authentication   | oAuth : Gmail                 |
 | CodeStyle        | EsLint + Prettier             |
 | Version control  | Git                           |
 | Deployment       | Github Pages                  |
@@ -31,3 +32,5 @@ Application for searching Rick & Morty's cartoon characters.
 ✔️ Single character page with info and funtional GoBack button, functional routing
 
 ✔️ Search by name functionality, saved search results on reload / route change
+
+✔️ Authentication (login / logout) with oAuth : Gmail

@@ -27,7 +27,7 @@ export const useAuth = () => {
   const onLoginSuccess = ({ profileObj }: ProfileObj) => {
     dispatch(login(profileObj));
 
-    alert('You are logged in');
+    alert(`Dear ${profileObj.name}, You are logged in!`);
   };
 
   const onLoginFailure = () => {
