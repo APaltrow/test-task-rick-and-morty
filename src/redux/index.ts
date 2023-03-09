@@ -11,3 +11,6 @@ export {
 
 export { getSingleCharacterState } from './slices/singleCharacter/singleCharacter.selectors';
 export { fetchSingleCharacterThunk } from './slices/singleCharacter/singleCharacter.actions';
+
+export { getAuthState } from './slices/auth/auth.selectors';
+export { login, logout } from './slices/auth/auth.reducer';

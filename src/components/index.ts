@@ -3,6 +3,9 @@
 export { CharactersList } from './CharactersList/CharactersList';
 export { InfoList } from './InfoList/InfoList';
 export { SearchBar } from './SearchBar/SearchBar';
+export { AuthButtons } from './AuthButtons/AuthButtons';
+export { LoginButton } from './UI/LoginButton/LoginButton';
+export { LogoutButton } from './UI/LogoutButton/LogoutButton';
 
 /*  UI items */
 

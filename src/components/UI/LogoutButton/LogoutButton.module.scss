@@ -1,0 +1,16 @@
+@import '@style/_variables.scss';
+
+.container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+
+  box-shadow: $box_shadow;
+
+  border-radius: 50%;
+}
