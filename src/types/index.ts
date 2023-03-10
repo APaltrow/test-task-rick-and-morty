@@ -1,3 +1,3 @@
-export * from './characterTypes';
-export * from './storeTypes';
-export * from './userTypes';
+export * from './character.types';
+export * from './store.types';
+export * from './user.types';

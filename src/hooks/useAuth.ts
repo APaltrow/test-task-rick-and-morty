@@ -9,6 +9,9 @@ import { gapi } from 'gapi-script';
 interface ProfileObj {
   profileObj: IUser;
 }
+interface LoginError {
+  error: string;
+}
 
 export const useAuth = () => {
   const dispatch = useAppDispatch();
@@ -30,10 +33,10 @@ export const useAuth = () => {
     alert(`Dear ${profileObj.name}, You are logged in!`);
   };
 
-  const onLoginFailure = () => {
+  const onLoginFailure = ({ error }: LoginError) => {
     dispatch(logout());
 
-    alert('Login failed');
+    alert(`Login failed: ${error}`);
   };
 
   const onLogoutSuccess = () => {

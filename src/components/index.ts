@@ -1,7 +1,8 @@
 /* COMPONENTS */
 
 export { CharactersList } from './CharactersList/CharactersList';
-export { InfoList } from './InfoList/InfoList';
+export { CharacterProfile } from './CharacterProfile/Profile/CharacterProfile';
+export { InfoList } from './CharacterProfile/InfoList/InfoList';
 export { SearchBar } from './SearchBar/SearchBar';
 export { AuthButtons } from './AuthButtons/AuthButtons';
 export { LoginButton } from './UI/LoginButton/LoginButton';

@@ -10,8 +10,6 @@ import {
   fetchSearchThunk,
 } from '@redux';
 
-// import style from './Home.module.scss';
-
 export const HomePage: FC = () => {
   const { characters, status, error } = useAppSelector(getCharactersState);
 
